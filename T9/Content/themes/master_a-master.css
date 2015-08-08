@@ -1,0 +1,22 @@
+#u117
+{
+	-pie-box-shadow: 0px 5px 4px #C9C9C9;
+	box-shadow: 0px 5px 4px rgba(0,0,0,0.21);
+	background-color: #FFFFFF;
+	position: fixed;
+}
+
+#u111
+{
+	background-color: transparent;
+	position: fixed;
+}
+
+#u346,#u344
+{
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	position: fixed;
+}
+
