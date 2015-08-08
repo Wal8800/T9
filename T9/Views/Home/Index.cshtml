@@ -1,4 +1,6 @@
-﻿<div id="body">
+﻿
+
+<div id="body">
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
@@ -39,7 +41,19 @@
                 You can easily find a web hosting company that offers the right mix of features
                 and price for your applications.
                 <a href="http://go.microsoft.com/fwlink/?LinkId=245164">Learn more…</a>
+            </li> 
+            <li class="test">
+                <div>
+                    <button id="test_button">get data</button>
+                </div>
+
+                <div id="test_output">
+
+                </div>
             </li>
+         
+            @Scripts.Render("~/bundles/jquery");
+            @Scripts.Render("~/bundles/getEvent");
         </ol>
     </section>
 </div>
