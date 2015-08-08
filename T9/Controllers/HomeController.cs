@@ -19,7 +19,7 @@ namespace T9.Controllers
 
             var request = new RestRequest("events.json", Method.GET);
             request.AddParameter("row", "10"); // adds to POST or URL querystring based on Method
-            request.AddParameter("fields", "event:(url,name,point,address,images,restrictions)");
+            request.AddParameter("fields", "event:(url,name,point,address,images,restrictions,description)");
             request.AddParameter("location", "2");
             request.AddParameter("order", "popularity");
             //request.AddUrlSegment("id", "123"); // replaces matching token in request.Resource
