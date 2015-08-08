@@ -38,6 +38,9 @@ namespace T9
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            // Load athop test api
+            bundles.Add(new ScriptBundle("~/Scripts/TestAtHop").Include("~/Scripts/TestAtHop.js"));
         }
     }
 }
