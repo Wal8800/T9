@@ -6,11 +6,21 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/site_global.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/themes/master_a-master-copy.css" />
   
 </head>
 <body>
     <header>
-        <div class="content-wrapper">
+        <div class="browser_width colelem" id="u970-bw">
+            <div class="shadow" id="u970">
+                <!-- group -->
+                <div class="clearfix" id="u970_align_to_page">
+                    <a class="nonblock nontext MuseLinkActive clip_frame grpelem" id="u975" href="index.html"><!-- image --><img class="block" id="u975_img" src="~/Images/logo-w-text.png" data-hidpi-src="~/Images/logo-w-text_2x.png" alt="" width="227" height="132" /></a>
+                </div>
+            </div>
+        </div>
+        @*<div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
                     <a href="~/">ASP.NET Web API</a></p>
@@ -23,7 +33,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div>*@
     </header>
     @RenderBody()
 

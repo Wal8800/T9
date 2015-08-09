@@ -1,59 +1,106 @@
 ﻿
-
-<div id="body">
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>Welcome to ASP.NET Web API!</h1>
-                <h2>Modify the code in this template to jump-start your ASP.NET Web API development.</h2>
-            </hgroup>
-            <p>
-                ASP.NET Web API allows you to expose your applications, data and services to the
-                web directly over HTTP.
-            </p>
-            <p>
-                To learn more about ASP.NET Web API visit the
-                <a href="http://go.microsoft.com/fwlink/?LinkID=238195" title="ASP.NET Web API Website">ASP.NET Web API Website</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET Web API.
-                If you have any questions about ASP.NET Web API, visit
-                <a href="http://go.microsoft.com/fwlink/?LinkID=238196" title="ASP.NET Web API Forum">our forums</a>.
-            </p>
+<div class="clearfix colelem" id="u989-4">
+    <!-- content -->
+    <h2>Hey, want to search for events?</h2>
+</div>
+<div class="clearfix colelem" id="pu982">
+    <!-- group -->
+    <div class="grpelem" id="u982">
+        <!-- custom html -->
+        <input style="
+    font-size: 1em;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: .9em;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    margin: .4em 0" type="text" name="name" placeholder="When do you want to go?">
+    </div>
+    <div class="grpelem" id="u984">
+        <!-- custom html -->
+        <input style="
+    font-size: 1em;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: .9em;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    margin: .4em 0" type="text" name="name" placeholder="What are you looking for?">
+    </div>
+    <div class="clip_frame clearfix grpelem" id="u998">
+        <!-- image -->
+        <div id="u998_clip">
+            <img class="position_content" id="u998_img" src="~/Images/untitled-121x21.png" alt="" width="20" height="20" />
         </div>
-    </section>
-    <section class="content-wrapper main-content clear-fix">
-        <h3>We suggest the following steps:</h3>
-        <ol class="round">
-            <li class="one">
-                <h5>Getting Started</h5>
-                ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-                a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-                is an ideal platform for building RESTful applications on the .NET Framework.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245160">Learn more…</a>
-            </li>
+    </div>
+</div>
+<div class="clearfix colelem" id="u144-6">
+    <!-- content -->
+    <h2 id="u144-2">Need Suggestions?</h2>
+    <h2>Here are the 20 most popular events in Auckland.</h2>
+</div>
 
-            <li class="two">
-                <h5>Add NuGet packages and jump-start your coding</h5>
-                NuGet makes it easy to install and update free libraries and tools.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245161">Learn more…</a>
-            </li>
-            <li class="three">
-                <h5>Find Web Hosting</h5>
-                You can easily find a web hosting company that offers the right mix of features
-                and price for your applications.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245164">Learn more…</a>
-            </li> 
-            <li class="test">
-                <div>
-                    <button id="test_button">get data</button>
-                </div>
+<div id="class_container">
+</div>
 
-                <div id="test_output">
+@*<div class="verticalspacer"></div>
+     </div>
+    </div>*@
+<!-- JS includes -->
+<!-- Other scripts -->
 
-                </div>
-            </li>
-         
-            @Scripts.Render("~/bundles/jquery");
-            @Scripts.Render("~/bundles/getEvent");
-        </ol>
-    </section>
+<script>
+    @*//var a = @ViewBag.List;
+    //console.log(@ViewBag.List);
+
+    //var a = JSON.parse(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.List.Events[0])));*@
+    var a = @Html.Raw(ViewBag.Content);
+    console.log(a);
+    var events = a.events;
+    console.log(events);
+    var element = document.getElementById("class_container");
+    var count = 1;
+    events.forEach(function (value) {
+
+        // best quality
+        var imgLink = value.images.images[0].transforms.transforms[3].url;
+
+        // address
+        var address = value.address;
+
+        var name = value.name;
+        var date = value.datetime_start;
+        var description = value.description;
+
+        console.log(address);
+
+        console.log(imgLink);
+
+        element.innerHTML = element.innerHTML + "sdf";
+        if (count == 1) element.innerHTML = element.innerHTML +"<div class=\"clearfix colelem\>";
+
+        element.innerHTML = element.innerHTML +"<a class=\"nonblock nontext rounded-corners shadow clearfix grpelem\" id=\"u553\" href=\"event-description.html\"><!-- group --><div class=\"rounded-corners clearfix grpelem\" id=\"u621\"><!-- group -->             <div class=\"clearfix grpelem\" id=\"u623-4\"><!-- content -->                 <p>$</p>             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu561\"><!-- column -->             <div class=\"clip_frame colelem\" id=\"u561\">                 <!-- image -->                 <img class=\"block\" id=\"u561_img\" src=" + imgLink + "\"  alt=\"\" width=\"225\" height=\"97\" />             </div>             <div class=\"clearfix colelem\" id=\"u577-4\"><!-- content -->                 <p>" + name + "</p><!--NAME OF EVENT-->             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu583-6\"><!-- column -->             <div class=\"clearfix colelem\" id=\"u583-6\"><!-- content -->                 <p>                     <span id=\"u583\">Where:</span>                     <span id=\"u583-2\"> </span>" + address + "<!-- address-->                 </p>             </div>             <div class=\"clearfix colelem\" id=\"u591-5\"><!-- content -->                 <p><span id=\"u591\">When:</span> " + date + "</p>             </div>         </div>     </a>";
+
+        if (count == 2) element.innerHTML = element.innerHTML + "</div>";
+    });
+
+    console.log(a);
+    var ob = document.getElementById("test");
+    ob.innerHTML = a.events[0].address;
+    console.log(a.events[0].address);
+
+
+
+</script>
+
+@*@foreach(var Event in ViewBag.List)
+    {
+        <p>Hello</p>
+    }*@
+
+<div id="event_container">
+
+
 </div>

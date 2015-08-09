@@ -19,7 +19,7 @@ namespace T9.Controllers
 
             var request = new RestRequest("events.json", Method.GET);
             request.AddParameter("row", "10"); // adds to POST or URL querystring based on Method
-            request.AddParameter("fields", "event:(url,name,point,address,images,restrictions,description)");
+            request.AddParameter("fields", "event:(url,name,point,address,images,restrictions,description,id,datetime_start)");
             request.AddParameter("location", "2");
             request.AddParameter("order", "popularity");
             //request.AddUrlSegment("id", "123"); // replaces matching token in request.Resource
@@ -34,6 +34,8 @@ namespace T9.Controllers
             var response = client.Execute(request);
             var content = response.Content; // raw content as string
 
+            ViewBag.Content = content;
+
             EventList list = JsonConvert.DeserializeObject<EventList>(content);
             // or automatically deserialize result
             // return content type is sniffed but can be explicitly set via RestClient.AddHandler();
@@ -42,7 +44,7 @@ namespace T9.Controllers
 
             // easy async support
 
-
+            //ViewBag.List = list.Events;
 
             //  async with deserialization
             // var asyncHandle = client.ExecuteAsync<Person>(request, response => {
@@ -52,6 +54,7 @@ namespace T9.Controllers
             // abort the request on demand
             //asyncHandle.Abort();
 
+            //ViewBag.List = list;
 
             return View();
         }
