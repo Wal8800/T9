@@ -243,6 +243,16 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\error.css" />
+    <Content Include="Content\themes\event-description.css" />
+    <Content Include="Content\themes\feedback.css" />
+    <Content Include="Content\themes\index.css" />
+    <Content Include="Content\themes\map.css" />
+    <Content Include="Content\themes\master_a-master-copy.css" />
+    <Content Include="Content\themes\master_a-master.css" />
+    <Content Include="Content\themes\search.css" />
+    <Content Include="Content\themes\site_global.css" />
+    <Content Include="Content\themes\team.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />

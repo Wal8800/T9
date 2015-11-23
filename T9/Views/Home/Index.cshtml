@@ -61,7 +61,10 @@
     var events = a.events;
     console.log(events);
     var element = document.getElementById("class_container");
+    //var element = $("#class_container");
+
     var count = 1;
+    var firstID =553;
     events.forEach(function (value) {
 
         // best quality
@@ -78,18 +81,25 @@
 
         console.log(imgLink);
 
-        element.innerHTML = element.innerHTML + "sdf";
-        if (count == 1) element.innerHTML = element.innerHTML +"<div class=\"clearfix colelem\>";
+        if (count == 1)  {
+            console.log("here");
+            //element.innerHTML = element.innerHTML +"<div class=\"clearfix colelem\>";
+        }
 
-        element.innerHTML = element.innerHTML +"<a class=\"nonblock nontext rounded-corners shadow clearfix grpelem\" id=\"u553\" href=\"event-description.html\"><!-- group --><div class=\"rounded-corners clearfix grpelem\" id=\"u621\"><!-- group -->             <div class=\"clearfix grpelem\" id=\"u623-4\"><!-- content -->                 <p>$</p>             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu561\"><!-- column -->             <div class=\"clip_frame colelem\" id=\"u561\">                 <!-- image -->                 <img class=\"block\" id=\"u561_img\" src=" + imgLink + "\"  alt=\"\" width=\"225\" height=\"97\" />             </div>             <div class=\"clearfix colelem\" id=\"u577-4\"><!-- content -->                 <p>" + name + "</p><!--NAME OF EVENT-->             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu583-6\"><!-- column -->             <div class=\"clearfix colelem\" id=\"u583-6\"><!-- content -->                 <p>                     <span id=\"u583\">Where:</span>                     <span id=\"u583-2\"> </span>" + address + "<!-- address-->                 </p>             </div>             <div class=\"clearfix colelem\" id=\"u591-5\"><!-- content -->                 <p><span id=\"u591\">When:</span> " + date + "</p>             </div>         </div>     </a>";
+        //$(this).
 
-        if (count == 2) element.innerHTML = element.innerHTML + "</div>";
+        element.innerHTML = element.innerHTML +"<a class=\"nonblock nontext rounded-corners shadow clearfix grpelem\" id=\"u" + firstID + "\" href=\"event-description.html\"><!-- group --><div class=\"rounded-corners clearfix grpelem\" id=\"u621\"><!-- group -->             <div class=\"clearfix grpelem\" id=\" u623-4\"><!-- content -->                 <p>$</p>             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu561\"><!-- column -->             <div class=\"clip_frame colelem\" id=\"u561\">                 <!-- image -->                 <img class=\"block\" id=\"u561_img\" src=" + imgLink + "\"  alt=\"\" width=\"225\" height=\"97\" />             </div>             <div class=\"clearfix colelem\" id=\"u577-4\"><!-- content -->                 <p>" + name + "</p><!--NAME OF EVENT-->             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu583-6\"><!-- column -->             <div class=\"clearfix colelem\" id=\"u583-6\"><!-- content -->                 <p>                     <span id=\"u583\">Where:</span>                     <span id=\"u583-2\"> </span>" + address + "<!-- address-->                 </p>             </div>             <div class=\"clearfix colelem\" id=\"u591-5\"><!-- content -->                 <p><span id=\"u591\">When:</span> " + date + "</p>             </div>         </div>     </a>";
+
+        //element.append("<a class=\"nonblock nontext rounded-corners shadow clearfix grpelem\" id=\"u" + firstID + "\" href=\"event-description.html\"><!-- group --><div class=\"rounded-corners clearfix grpelem\" id=\"u621\"><!-- group -->             <div class=\"clearfix grpelem\" id=\" u623-4\"><!-- content -->                 <p>$</p>             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu561\"><!-- column -->             <div class=\"clip_frame colelem\" id=\"u561\">                 <!-- image -->                 <img class=\"block\" id=\"u561_img\" src=" + imgLink + "\"  alt=\"\" width=\"225\" height=\"97\" />             </div>             <div class=\"clearfix colelem\" id=\"u577-4\"><!-- content -->                 <p>" + name + "</p><!--NAME OF EVENT-->             </div>         </div>         <div class=\"clearfix grpelem\" id=\"pu583-6\"><!-- column -->             <div class=\"clearfix colelem\" id=\"u583-6\"><!-- content -->                 <p>                     <span id=\"u583\">Where:</span>                     <span id=\"u583-2\"> </span>" + address + "<!-- address-->                 </p>             </div>             <div class=\"clearfix colelem\" id=\"u591-5\"><!-- content -->                 <p><span id=\"u591\">When:</span> " + date + "</p>             </div>         </div>     </a>");
+
+
+        if (count == 2) {
+           // element.innerHTML = element.innerHTML + "</div>";
+        }
+        count++
+        firstID++;
+        if (count > 2) count = 1;
     });
-
-    console.log(a);
-    var ob = document.getElementById("test");
-    ob.innerHTML = a.events[0].address;
-    console.log(a.events[0].address);
 
 
 
